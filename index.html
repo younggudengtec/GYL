@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>YG&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="XXX">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YG&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="YG&#39;s Blog">
+<meta property="og:description" content="XXX">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="YG&#39;s Blog">
+<meta name="twitter:description" content="XXX">
+  
+    <link rel="alternate" href="/atom.xml" title="YG&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YG&#39;s Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-hexoghpage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/06/hexoghpage/" class="article-date">
+  <time datetime="2018-10-06T13:50:13.000Z" itemprop="datePublished">2018-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/hexoghpage/">hexo-githubPage-Blog 配置说明</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="域名与githubPage对接"><a href="#域名与githubPage对接" class="headerlink" title="域名与githubPage对接"></a>域名与githubPage对接</h2><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p><code>yg.younggu.xyz</code> 域名的 <code>A</code> 解析 <code>192.30.252.153</code><br>这里需要换成自己的域名.<br><code>yg.younggu.xyz</code> 域名的 <code>CNAME</code> 解析: <code>youngguyl.github.io.</code><br>需要替换自己的域名, github 的子域名也需要修改为自己的.</p>
+<h4 id="若有多个子域名-解析的值一样-换掉子域名即可"><a href="#若有多个子域名-解析的值一样-换掉子域名即可" class="headerlink" title="若有多个子域名,解析的值一样.换掉子域名即可."></a>若有多个子域名,解析的值一样.换掉子域名即可.</h4><p>e.g:<br><code>a.abc.com</code> ‘A’ <code>192.30.252.153</code><br><code>a.abc.com</code> ‘CNAME’ <code>xxx.github.io.</code>  xxx为你自己在github注册的地址.<br>另外一个子域名, 解析的地址也一样.<br><code>b.abc.com</code> ‘A’ <code>192.30.252.153</code><br><code>b.abc.com</code> ‘CNAME’ <code>xxx.github.io.</code>  xxx为你自己在github注册的地址.</p>
+<h3 id="github设置"><a href="#github设置" class="headerlink" title="github设置"></a>github设置</h3><p>youngguyl/yonglinPage, 进入设置项</p>
+<ol>
+<li>GitHub Pages<br>1 <code>Source</code> 选择<code>gh-pages branch</code>使用gh-pages branch 作为静态页面<br>2 <code>Custom domain</code>, 设置<code>yg.younggu.xyz</code>, 需要和域名解析一致.</li>
+<li>文件需要需要增加一个CNAME的文件. 目的是为了让github知道是哪个子域名<br>1 内容为<code>yg.younggu.xyz</code>即可</li>
+</ol>
+<h2 id="本地生成-git-SSH-Key"><a href="#本地生成-git-SSH-Key" class="headerlink" title="本地生成 git SSH Key"></a>本地生成 git SSH Key</h2><h3 id="配置-git"><a href="#配置-git" class="headerlink" title="配置 git"></a>配置 git</h3><p><code>git config --global user.name &quot;youngguyl&quot;</code><br><code>git config --global user.email &quot;7188209@qq.com&quot;</code></p>
+<h3 id="生成-SSH-Key"><a href="#生成-SSH-Key" class="headerlink" title="生成 SSH Key"></a>生成 SSH Key</h3><ol>
+<li>生成ssh<br><code>ssh-keygen -t rsa -C &quot;7188209@qq.com&quot;</code> </li>
+</ol>
+<p>提示密钥文件的地址 <code>/home/pi/.ssh/id_rsa</code> 可以修改</p>
+<ol start="2">
+<li><p>添加密钥到 ssh-agent<br><code>ssh-agent -s</code></p>
+</li>
+<li><p>添加 SSH key 到 id_rsa<br><code>ssh-add ~/.ssh/id_rsa</code> 生成一个 <code>~/.ssh/id_rsa.pub</code>文件. </p>
+</li>
+</ol>
+<h3 id="github-新建一个-SSH"><a href="#github-新建一个-SSH" class="headerlink" title="github 新建一个 SSH"></a>github 新建一个 SSH</h3><p><code>settings</code> -&gt; <code>SSH and GPG keys</code> 新建一个SSH,名称容易区分即可把 <code>~/.ssh/id_rsa.pub</code>的密钥填进去.</p>
+<h3 id="测试是否成功"><a href="#测试是否成功" class="headerlink" title="测试是否成功"></a>测试是否成功</h3><p><code>ssh -T git@github.com</code> 如果出现下面的提示, 那就成功了.</p>
+<h2 id="配置-hexo"><a href="#配置-hexo" class="headerlink" title="配置 hexo,"></a>配置 hexo,</h2><p>编译 <code>hexoblog文件夹\_config.yml</code><br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">...</span></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:youngguyl/yonglinPage.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">gh-pages</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="上传静态博客"><a href="#上传静态博客" class="headerlink" title="上传静态博客"></a>上传静态博客</h2><h3 id="在博客文件夹中-安装-hexo-deployer-git"><a href="#在博客文件夹中-安装-hexo-deployer-git" class="headerlink" title="在博客文件夹中, 安装 hexo-deployer-git"></a>在博客文件夹中, 安装 hexo-deployer-git</h3><p><code>npm install hexo-deployer-git --save</code><br>不安装, 会出现 <code>error deployer not found:git</code> 错误</p>
+<h3 id="上传静态博客-1"><a href="#上传静态博客-1" class="headerlink" title="上传静态博客"></a>上传静态博客</h3><p><code>hexo g</code> 生产静态博客<br><code>hexo d</code> 上传博客到 git.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/06/hexoghpage/" data-id="cjmxi17l300017wlf31tk1r5o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/个人博客/">个人博客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名/">域名</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/06/hello-world/" class="article-date">
+  <time datetime="2018-10-06T13:45:16.706Z" itemprop="datePublished">2018-10-06</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/06/hello-world/" data-id="cjmxi17k500007wlfcym28tlj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/个人博客/">个人博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/个人博客/" style="font-size: 10px;">个人博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/06/hexoghpage/">hexo-githubPage-Blog 配置说明</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/06/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Young Gu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
